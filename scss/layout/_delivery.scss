@@ -1,0 +1,77 @@
+/*==========================================================
+「どんなお花が届くの？」
+==========================================================*/
+.l-card__delivery {
+	width: 100vw;
+	background-color: #ead5dc;
+	color: rgba(63,67,74,0.9);
+	text-align: center;
+	padding: 80px;
+
+	@include mq(md) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 700px;
+		padding: 0; //リセット
+	}
+	@include mq(lg) {
+		height: 750px;
+	}
+	
+	.delivery-wrap__left {
+		@include mq(md) {
+			width: 50%;
+		}
+		>h3 {
+			font-size: 21px;
+			font-weight: normal;
+			@include mq(md) {
+				display: none; //左サイドの「どんなお花が～」を非表示
+			}
+		}
+
+		img {
+			width: 75%;
+			@include mq(md) {
+				width: 90%;
+			}
+		}
+	}
+
+	.delivery-wrap__right {
+		@include mq(md) {
+			width: 400px;
+			margin-right: 40px;
+		}
+		@include mq(lg) {
+			width: 500px;
+			margin-right: 80px;
+		}
+		@include mq(xl) {
+			margin-right: 100px;
+		}
+
+		h2 {
+			display: none;
+			@include mq(md) {
+				display: block; //右サイドに「どんなお花が～」を表示
+				font-weight: normal;
+				padding-bottom: 50px;
+			}
+		}
+
+		h3 {
+			font-weight: 400;
+			font-size: 21px;
+			padding: 15px;
+		}
+
+		p {
+			padding: 10px 10px;
+			font-size: 15px;
+			letter-spacing: 2px;
+			text-align: left;
+		}
+	}
+}

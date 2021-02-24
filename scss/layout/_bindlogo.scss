@@ -1,0 +1,38 @@
+/*==================================================
+閉じロゴ
+===================================================*/
+.l-card__bindlogo {
+	background-image: url(../images/bg_download2.jpg);
+	background-size: 400px;
+	background-position: center bottom;
+	background-color: #efdfc5;
+	width: 100vw;
+	height: 500px;
+	color: rgba(63,67,74,0.9);
+	text-align: center;
+	padding: 80px 100px;
+
+	h2 {
+	font-size: 16px;
+	font-weight: normal;
+	padding-top: 10px;
+	}
+	img {
+	width: 110px;
+	}
+}
+
+/*
+メディアクエリ
+-------------------------------------------------------------*/
+@include mq(lg) {
+	.l-card__bindlogo {
+		height: 420px;
+		background-size: 500px;
+		background-position: bottom 0 left 35%;
+		
+		img,h2 {
+			margin-left: 300px;
+		}
+	}
+}

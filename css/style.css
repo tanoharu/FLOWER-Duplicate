@@ -1,0 +1,842 @@
+@charset "UTF-8";
+/*==================================================
+foundation
+==================================================*/
+/*==================================================
+共通
+==================================================*/
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/*===============================================
+メディアクエリ
+===============================================*/
+.foo {
+  color: blue;
+}
+
+@media screen and (min-width: 485px) {
+  .foo {
+    color: yellow;
+  }
+}
+
+@media screen and (min-width: 823px) {
+  .foo {
+    color: red;
+  }
+}
+
+/*==================================================
+layout
+==================================================*/
+/*==================================================
+閉じロゴ
+===================================================*/
+.l-card__bindlogo {
+  background-image: url(../images/bg_download2.jpg);
+  background-size: 400px;
+  background-position: center bottom;
+  background-color: #efdfc5;
+  width: 100vw;
+  height: 500px;
+  color: rgba(63, 67, 74, 0.9);
+  text-align: center;
+  padding: 80px 100px;
+}
+
+.l-card__bindlogo h2 {
+  font-size: 16px;
+  font-weight: normal;
+  padding-top: 10px;
+}
+
+.l-card__bindlogo img {
+  width: 110px;
+}
+
+/*
+メディアクエリ
+-------------------------------------------------------------*/
+@media screen and (min-width: 823px) {
+  .l-card__bindlogo {
+    height: 420px;
+    background-size: 500px;
+    background-position: bottom 0 left 35%;
+  }
+  .l-card__bindlogo img, .l-card__bindlogo h2 {
+    margin-left: 300px;
+  }
+}
+
+/*======================================================
+花の器
+======================================================*/
+.l-card__bottle {
+  width: 100vw;
+  background-color: #E7E3DF;
+  color: rgba(63, 67, 74, 0.9);
+  text-align: center;
+}
+
+.l-card__bottle .bottle-container .bottle-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.l-card__bottle .bottle-container .bottle-intro h3 {
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 2.3rem;
+  padding-bottom: 20px;
+}
+
+.l-card__bottle .bottle-container .bottle-intro .balloon-white {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: white;
+  padding: 5px;
+  margin: auto;
+  width: 130px;
+}
+
+.l-card__bottle .bottle-container .bottle-intro > img {
+  width: 380px;
+}
+
+.l-card__bottle .bottle-container .bottle-intro :nth-child(4) {
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 2px;
+  padding: 20px 30px;
+}
+
+.l-card__bottle .bottle-container > :nth-child(4) {
+  position: relative;
+  left: -63px;
+  font-size: 13px;
+  padding: 15px 10px;
+}
+
+.l-card__bottle .bottle-container .p-bottle-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.l-card__bottle .bottle-container .p-bottle-wrap .bottle-item {
+  position: relative;
+}
+
+.l-card__bottle .bottle-container .p-bottle-wrap .bottle-item img {
+  display: block;
+  width: 100px;
+  margin: 7px;
+}
+
+.l-card__bottle .bottle-container .p-bottle-wrap .bottle-item > p {
+  display: inline-block;
+  position: relative;
+  top: -35px;
+  font-size: 14px;
+}
+
+.l-card__bottle .bottle-container .bottle-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  left: -23px;
+}
+
+.l-card__bottle .bottle-container .bottle-text > p {
+  font-weight: 700;
+  border: 2px solid #3f434a;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.l-card__bottle .bottle-container .bottle-text .bottle-text__value {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.l-card__bottle .bottle-container .bottle-text .bottle-text__value p:nth-of-type(2) {
+  font-size: 13px;
+}
+
+/*
+メディアクエリ
+--------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .l-card__bottle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 5%;
+  }
+  .l-card__bottle .bottle-container {
+    margin: 100px 0 100px auto;
+    width: 400px;
+  }
+  .l-card__bottle .bottle-container .bottle-intro > h3 {
+    font-size: 26px;
+  }
+  .l-card__bottle .bottle-container .bottle-intro > img {
+    display: none;
+  }
+  .l-card__bottle .bottle-container .bottle-intro :nth-child(4) {
+    margin-top: 90px;
+    padding: 0;
+    padding-bottom: 15px;
+  }
+  .l-card__bottle .bottle-container .p-bottle-wrap {
+    z-index: 10;
+  }
+  .l-card__bottle .bottle-container .p-bottle-wrap .bottle-item img {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  .l-card__bottle .bottle-container .bottle-text {
+    left: -60px;
+  }
+  .l-card__bottle .bottle-container > :nth-child(4) {
+    left: -105px;
+  }
+  .l-card__bottle .flower-img {
+    width: 55%;
+    background-image: url(../../images/bg_vase.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 70% right 40%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .flower-img {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+カレンダー
+==============================================*/
+.l-calender {
+  height: 450px;
+  text-align: center;
+}
+
+.l-calender p {
+  font-size: 20px;
+  color: rgba(63, 67, 74, 0.9);
+  padding: 100px 0 20px 0;
+  line-height: 2.0rem;
+  font-weight: 500;
+}
+
+.l-calender img {
+  width: 170px;
+}
+
+/*
+メディアクエリ
+---------------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .l-calender {
+    width: 50%;
+    height: 100%;
+    padding: 60px 0;
+  }
+}
+
+/*==========================================================
+「どんなお花が届くの？」
+==========================================================*/
+.l-card__delivery {
+  width: 100vw;
+  background-color: #ead5dc;
+  color: rgba(63, 67, 74, 0.9);
+  text-align: center;
+  padding: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .l-card__delivery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 700px;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 823px) {
+  .l-card__delivery {
+    height: 750px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .l-card__delivery .delivery-wrap__left {
+    width: 50%;
+  }
+}
+
+.l-card__delivery .delivery-wrap__left > h3 {
+  font-size: 21px;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .l-card__delivery .delivery-wrap__left > h3 {
+    display: none;
+  }
+}
+
+.l-card__delivery .delivery-wrap__left img {
+  width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  .l-card__delivery .delivery-wrap__left img {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .l-card__delivery .delivery-wrap__right {
+    width: 400px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width: 823px) {
+  .l-card__delivery .delivery-wrap__right {
+    width: 500px;
+    margin-right: 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .l-card__delivery .delivery-wrap__right {
+    margin-right: 100px;
+  }
+}
+
+.l-card__delivery .delivery-wrap__right h2 {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .l-card__delivery .delivery-wrap__right h2 {
+    display: block;
+    font-weight: normal;
+    padding-bottom: 50px;
+  }
+}
+
+.l-card__delivery .delivery-wrap__right h3 {
+  font-weight: 400;
+  font-size: 21px;
+  padding: 15px;
+}
+
+.l-card__delivery .delivery-wrap__right p {
+  padding: 10px 10px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+/*===================================================
+フッター
+===================================================*/
+footer {
+  width: 100vw;
+  height: 530px;
+  background-color: #3f434a;
+  padding: 40px 40px 0px 40px;
+  color: white;
+}
+
+footer img {
+  float: right;
+  width: 60px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  padding: 10px;
+  font-size: 14px;
+}
+
+footer p {
+  color: #7e8186;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  padding-top: 120px;
+}
+
+/*
+メディアクエリ
+----------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 80px 80px 100px 50px;
+  }
+  footer img {
+    display: block;
+    position: relative;
+    top: -50px;
+    left: 50px;
+  }
+  footer .footer-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    white-space: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer .footer-nav ul li {
+    padding: 0;
+  }
+  footer .footer-nav ul li a {
+    text-decoration: none;
+    color: inherit;
+  }
+  footer p {
+    padding-top: 300px;
+  }
+}
+
+/*=============================================
+ヘッダー
+=============================================*/
+.l-header {
+  background-image: url(../images/bg_header_pink_sp.jpg);
+  width: 100vw;
+  background-size: cover;
+  background-position: 0 45%;
+  height: 930px;
+  text-align: center;
+  color: white;
+  padding: 90px 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .l-header {
+    background-image: none;
+    background-image: url(../images/bg_header.jpg);
+    background-position: 50% 25%;
+    background-size: cover;
+    padding-top: 200px;
+    margin-bottom: -120px;
+  }
+}
+
+.l-header img {
+  width: 130px;
+  margin-bottom: 15px;
+}
+
+.l-header h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/*
+固定バー
+-------------------------------------------------------------------------*/
+.c-fixbar {
+  position: relative;
+  text-align: center;
+}
+
+.c-fixbar .c-fixbar-img {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+
+@media screen and (min-width: 768px) {
+  .c-fixbar .c-fixbar-img {
+    position: static;
+    position: relative;
+    top: -100px;
+    background-color: transparent;
+  }
+}
+
+.c-fixbar .c-fixbar-img img {
+  width: 160px;
+  margin: 20px 10px;
+}
+
+.c-fixbar > p {
+  position: absolute;
+  top: -60px;
+  color: white;
+  width: 100%;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 768px) {
+  .c-fixbar > p {
+    position: static;
+    position: relative;
+  }
+}
+
+/*
+フェードインアニメーション
+----------------------------------------------------------------------------*/
+@media screen and (min-width: 485px) {
+  .l-header > img {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    -webkit-transition: all 3s;
+    transition: all 3s;
+  }
+  .l-header > img.done {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .l-header > h1 {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    -webkit-transition: all 3s;
+    transition: all 3s;
+  }
+  .l-header > h1.done {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .c-fixbar > p {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    -webkit-transition: all 3s;
+    transition: all 3s;
+  }
+  .c-fixbar > p.done {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c-fixbar-img > a > img {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    -webkit-transition: all 3s;
+    transition: all 3s;
+  }
+  .c-fixbar-img > a > img.done {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+/*==================================================
+Object
+==================================================*/
+/*
+project
+---------------------------------------------------------------------------*/
+/*=======================================================
+ブーケ案内
+=======================================================*/
+.p-bouquet {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  color: rgba(63, 67, 74, 0.9);
+  width: 100vw;
+  line-height: 1.65rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.p-bouquet .c-orange-balloon {
+  background-color: #ee7543;
+  display: inline-block;
+  position: relative;
+  width: 130px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.p-bouquet .c-orange-balloon::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 8px solid #ee7543;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.p-bouquet h3 {
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 2rem;
+}
+
+.p-bouquet img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.p-bouquet p:nth-of-type(2) {
+  font-size: 15px;
+  padding-top: 20px;
+}
+
+.p-bouquet p:nth-of-type(3) {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+.p-bouquet p:nth-of-type(3) span {
+  font-size: 15px;
+}
+
+.p-bouquet p:nth-of-type(n+4) {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.2rem;
+}
+
+/*
+メディアクエリ
+---------------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .bou-cal-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 580px;
+  }
+  .bou-cal-wrap .p-bouquet {
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    padding: 50px;
+  }
+}
+
+/*
+.purple .blue .yellow
+-----------------------------------------------------------------------*/
+.p-concept-wrap {
+  width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+  .p-concept-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+  }
+}
+
+.p-concept-wrap .p-concept {
+  width: 100vw;
+  height: 60vh;
+  background-size: cover;
+  background-position: 0 95%;
+  padding: 55px 45px;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .p-concept-wrap .p-concept {
+    height: 80vh;
+    letter-spacing: 1px;
+    background-position: center;
+  }
+}
+
+.p-concept-wrap .p-concept h2 {
+  line-height: 2.3rem;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .p-concept-wrap .p-concept h2 {
+    font-size: 24px;
+  }
+}
+
+.p-concept-wrap .p-concept p {
+  padding-top: 10px;
+  line-height: 1.6rem;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.purple {
+  background-image: url(../images/bg_service01.jpg);
+}
+
+.blue {
+  background-image: url(../images/bg_service02.jpg);
+}
+
+.yellow {
+  background-image: url(../images/bg_service03.jpg);
+}
+
+/*===============================================
+サービス
+=================================================*/
+.p-servise {
+  color: rgba(63, 67, 74, 0.9);
+  padding: 120px 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.p-servise h2 {
+  font-weight: normal;
+  line-height: 2rem;
+  letter-spacing: 1px;
+}
+
+.p-servise .servise-icon-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 485px) {
+  .p-servise .servise-icon-wrap {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.p-servise .servise-icon-wrap .servise-icon h3 {
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.p-servise .servise-icon-wrap .servise-icon h2, .p-servise .servise-icon-wrap .servise-icon h3 {
+  font-weight: normal;
+}
+
+.p-servise .servise-icon-wrap .servise-icon img {
+  width: 80px;
+  padding: 30px 0 0 0;
+}
+
+.p-servise .servise-icon-wrap .servise-icon p {
+  padding: 0 20px;
+  font-size: 15px;
+}
+
+/*メディアクエリ
+------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .p-servise {
+    width: 100vw;
+  }
+  .p-servise .servise-icon-wrap {
+    width: 85%;
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+/*
+component
+---------------------------------------------------------------------------*/
+/*
+utility
+---------------------------------------------------------------------------*/
+/*# sourceMappingURL=style.css.map */

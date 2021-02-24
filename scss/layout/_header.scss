@@ -1,0 +1,125 @@
+/*=============================================
+ヘッダー
+=============================================*/
+.l-header {
+	background-image: url(../images/bg_header_pink_sp.jpg);//※style.scssからの相対パス
+	width: 100vw;
+	background-size: cover;
+	background-position: 0 45%; //横・縦
+	height: 930px; //「*北海道、沖縄、離島～～」の高さを一定にするため固定
+	text-align: center;
+	color: white;
+	padding: 90px 100px;
+	@include mq(md) {
+		background-image: none;
+		background-image: url(../images/bg_header.jpg);
+		background-position: 50% 25%;
+		background-size: cover;
+		padding-top: 200px;
+		margin-bottom: -120px; //アニメーションtranslateY(20px)分？
+	}
+	
+	img {
+		width: 130px;
+		margin-bottom: 15px;
+	}
+
+	h1 {
+		font-size: 18px;
+		font-weight: normal;
+	}
+}
+
+/*
+固定バー
+-------------------------------------------------------------------------*/
+.c-fixbar {
+	position: relative;
+	text-align: center;
+	.c-fixbar-img {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		background-color: rgba( 255,255,255,0.9) ;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 20;
+		
+		@include mq(md) {
+			position: static; //postion:fixedリセット
+			position: relative;
+			top: -100px;
+			background-color: transparent; //背景色リセット
+		}
+		img {
+			width: 160px;
+			margin: 20px 10px;
+		}
+	}
+	>p {
+		position: absolute;
+		top: -60px;
+		color: white;
+		width: 100%;
+		font-size: 13px;
+		@include mq(md) {
+			position: static;    
+			position: relative;//画像と重なってしまうため相対位置に
+		}
+	}
+}
+
+/*
+フェードインアニメーション
+----------------------------------------------------------------------------*/
+@include mq(sm) {
+	.l-header{
+		>img {
+			opacity: 0;
+			transform: translateY(20px)/*スクロールアップする距離*/;
+			transition: all 3s/*処理にかかる時間*/;
+			&.done {
+				opacity : 1;
+				transform : translate(0, 0);
+			}
+		}
+		>h1 {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: all 3s;
+			&.done {
+				opacity : 1;
+				transform : translate(0, 0);
+			}
+		}
+	}
+	.c-fixbar {
+		>p {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: all 3s;
+			&.done {
+				opacity : 1;
+				transform : translate(0, 0);
+			}
+		}	
+	}
+}
+
+
+@include mq(md) {
+	.c-fixbar-img {
+		>a {
+			>img{
+				opacity: 0;
+				transform: translateY(20px);
+				transition: all 3s;
+				&.done {
+					opacity : 1;
+					transform : translate(0, 0);
+				}
+			}
+		}
+	}
+}
