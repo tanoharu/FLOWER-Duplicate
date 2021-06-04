@@ -1,16 +1,13 @@
-/*===================================================
-フッター
-===================================================*/
 footer {
 	width: 100vw;
 	height: 530px;
-	background-color: #3f434a;
 	padding: 40px 40px 0px 40px;
+	background-color: #3f434a;
 	color: white;
 
 	img {
-		float: right;
 		width: 60px;
+		float: right;
 	}
 
 	ul {
@@ -19,20 +16,21 @@ footer {
 		li {
 			padding: 10px;
 			font-size: 14px;
+			>a {
+				color: #fff;
+				text-decoration: none;
+			}
 		}
 	}
 	p {
-		color: #7e8186;
+		padding-top: 120px;
 		text-align: center;
 		font-size: 13px;
 		font-weight: 700;
-		padding-top: 120px;
+		color: #7e8186;
 	}
 }
 
-/*
-メディアクエリ
-----------------------------------------------------------------*/
 @include mq(md) {
 	footer {
 		padding: 80px 80px 100px 50px;
@@ -45,8 +43,8 @@ footer {
 		.footer-nav {
 			ul {
 				display: flex;
-				white-space: nowrap; //文字列を折り返さない
 				justify-content: space-around;
+				white-space: nowrap; //文字列を折り返さない
 
 				li {
 					padding: 0;

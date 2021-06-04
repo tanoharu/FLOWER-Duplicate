@@ -1,16 +1,13 @@
-/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-カレンダー
-==============================================*/
 .l-calender {
 	height: 450px;
 	text-align: center;
 
 	p {
-		font-size: 20px;
-		color: rgba(63,67,74,0.9);
 		padding: 100px 0 20px 0;
 		line-height: 2.0rem;
+		font-size: 20px;
 		font-weight: 500;
+		color: rgba(63,67,74,0.9);
 	}
 
 	img {
@@ -18,9 +15,6 @@
 	}
 }
 
-/*
-メディアクエリ
----------------------------------------------------------------------*/
 .l-calender {
 	@include mq(md) {
 		width: 50%;

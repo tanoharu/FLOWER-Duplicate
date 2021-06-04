@@ -1,15 +1,11 @@
-/*==================================================
-共通
-==================================================*/
+/*共通
+---------------------------------------------------*/
 body {
 	font-family: 'Noto Sans JP', sans-serif;
 }
-	
-	
-/*===============================================
-メディアクエリ
-===============================================*/
-//  変数を定義（マップ型）
+
+/*mediaquery
+---------------------------------------------------*/
 $breakpoints: (
 	'sm': 'screen and (min-width: 485px)',
 	'md': 'screen and (min-width: 768px)',
@@ -20,16 +16,5 @@ $breakpoints: (
 @mixin mq($breakpoint: sm) {
 	@media #{map-get($breakpoints, $breakpoint)} {
 		@content;
-	}
-}
-
-// 記述例
-.foo {
-	color: blue;
-	@include mq() { // 引数を省略（初期値はmdの768px）
-		color: yellow;
-	}
-	@include mq(lg) { // 引数を個別に指定
-		color: red;
 	}
 }

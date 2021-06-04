@@ -2,63 +2,39 @@
 /*==================================================
 foundation
 ==================================================*/
-/*==================================================
-共通
-==================================================*/
+/*共通
+---------------------------------------------------*/
 body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-/*===============================================
-メディアクエリ
-===============================================*/
-.foo {
-  color: blue;
-}
-
-@media screen and (min-width: 485px) {
-  .foo {
-    color: yellow;
-  }
-}
-
-@media screen and (min-width: 823px) {
-  .foo {
-    color: red;
-  }
-}
-
+/*mediaquery
+---------------------------------------------------*/
 /*==================================================
 layout
 ==================================================*/
-/*==================================================
-閉じロゴ
-===================================================*/
 .l-card__bindlogo {
+  width: 100vw;
+  height: 500px;
+  padding: 80px 100px;
+  text-align: center;
   background-image: url(../images/bg_download2.jpg);
   background-size: 400px;
   background-position: center bottom;
   background-color: #efdfc5;
-  width: 100vw;
-  height: 500px;
   color: rgba(63, 67, 74, 0.9);
-  text-align: center;
-  padding: 80px 100px;
 }
 
 .l-card__bindlogo h2 {
+  padding-top: 10px;
   font-size: 16px;
   font-weight: normal;
-  padding-top: 10px;
 }
 
 .l-card__bindlogo img {
   width: 110px;
 }
 
-/*
-メディアクエリ
--------------------------------------------------------------*/
 @media screen and (min-width: 823px) {
   .l-card__bindlogo {
     height: 420px;
@@ -70,9 +46,6 @@ layout
   }
 }
 
-/*======================================================
-花の器
-======================================================*/
 .l-card__bottle {
   width: 100vw;
   background-color: #E7E3DF;
@@ -81,35 +54,28 @@ layout
 }
 
 .l-card__bottle .bottle-container .bottle-intro {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
 }
 
 .l-card__bottle .bottle-container .bottle-intro h3 {
+  padding-bottom: 20px;
+  line-height: 2.3rem;
   font-size: 22px;
   font-weight: normal;
-  line-height: 2.3rem;
-  padding-bottom: 20px;
 }
 
 .l-card__bottle .bottle-container .bottle-intro .balloon-white {
+  width: 130px;
   display: block;
+  padding: 5px;
+  margin: auto;
   font-weight: 700;
   font-size: 14px;
   background-color: white;
-  padding: 5px;
-  margin: auto;
-  width: 130px;
 }
 
 .l-card__bottle .bottle-container .bottle-intro > img {
@@ -117,26 +83,22 @@ layout
 }
 
 .l-card__bottle .bottle-container .bottle-intro :nth-child(4) {
+  padding: 20px 30px;
   text-align: left;
   font-size: 15px;
   letter-spacing: 2px;
-  padding: 20px 30px;
 }
 
 .l-card__bottle .bottle-container > :nth-child(4) {
   position: relative;
   left: -63px;
-  font-size: 13px;
   padding: 15px 10px;
+  font-size: 13px;
 }
 
 .l-card__bottle .bottle-container .p-bottle-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -145,8 +107,8 @@ layout
 }
 
 .l-card__bottle .bottle-container .p-bottle-wrap .bottle-item img {
-  display: block;
   width: 100px;
+  display: block;
   margin: 7px;
 }
 
@@ -158,26 +120,22 @@ layout
 }
 
 .l-card__bottle .bottle-container .bottle-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   position: relative;
   left: -23px;
 }
 
 .l-card__bottle .bottle-container .bottle-text > p {
-  font-weight: 700;
-  border: 2px solid #3f434a;
-  font-size: 14px;
   padding: 5px;
+  border: 2px solid #3f434a;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .l-card__bottle .bottle-container .bottle-text .bottle-text__value {
-  text-align: left;
   padding-left: 20px;
+  text-align: left;
   font-size: 18px;
 }
 
@@ -185,22 +143,15 @@ layout
   font-size: 13px;
 }
 
-/*
-メディアクエリ
---------------------------------------------------------*/
 @media screen and (min-width: 768px) {
   .l-card__bottle {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     padding-left: 5%;
   }
   .l-card__bottle .bottle-container {
-    margin: 100px 0 100px auto;
     width: 400px;
+    margin: 100px 0 100px auto;
   }
   .l-card__bottle .bottle-container .bottle-intro > h3 {
     font-size: 26px;
@@ -228,12 +179,12 @@ layout
   }
   .l-card__bottle .flower-img {
     width: 55%;
+    margin-right: 0;
+    margin-left: auto;
     background-image: url(../../images/bg_vase.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top 70% right 40%;
-    margin-right: 0;
-    margin-left: auto;
   }
 }
 
@@ -244,29 +195,23 @@ layout
   }
 }
 
-/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-カレンダー
-==============================================*/
 .l-calender {
   height: 450px;
   text-align: center;
 }
 
 .l-calender p {
-  font-size: 20px;
-  color: rgba(63, 67, 74, 0.9);
   padding: 100px 0 20px 0;
   line-height: 2.0rem;
+  font-size: 20px;
   font-weight: 500;
+  color: rgba(63, 67, 74, 0.9);
 }
 
 .l-calender img {
   width: 170px;
 }
 
-/*
-メディアクエリ
----------------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
   .l-calender {
     width: 50%;
@@ -275,29 +220,20 @@ layout
   }
 }
 
-/*==========================================================
-「どんなお花が届くの？」
-==========================================================*/
 .l-card__delivery {
   width: 100vw;
+  padding: 80px;
+  text-align: center;
   background-color: #ead5dc;
   color: rgba(63, 67, 74, 0.9);
-  text-align: center;
-  padding: 80px;
 }
 
 @media screen and (min-width: 768px) {
   .l-card__delivery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
   }
 }
@@ -362,38 +298,35 @@ layout
 @media screen and (min-width: 768px) {
   .l-card__delivery .delivery-wrap__right h2 {
     display: block;
-    font-weight: normal;
     padding-bottom: 50px;
+    font-weight: normal;
   }
 }
 
 .l-card__delivery .delivery-wrap__right h3 {
+  padding: 15px;
   font-weight: 400;
   font-size: 21px;
-  padding: 15px;
 }
 
 .l-card__delivery .delivery-wrap__right p {
   padding: 10px 10px;
+  text-align: left;
   font-size: 15px;
   letter-spacing: 2px;
-  text-align: left;
 }
 
-/*===================================================
-フッター
-===================================================*/
 footer {
   width: 100vw;
   height: 530px;
-  background-color: #3f434a;
   padding: 40px 40px 0px 40px;
+  background-color: #3f434a;
   color: white;
 }
 
 footer img {
-  float: right;
   width: 60px;
+  float: right;
 }
 
 footer ul {
@@ -405,17 +338,19 @@ footer ul li {
   font-size: 14px;
 }
 
+footer ul li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
 footer p {
-  color: #7e8186;
+  padding-top: 120px;
   text-align: center;
   font-size: 13px;
   font-weight: 700;
-  padding-top: 120px;
+  color: #7e8186;
 }
 
-/*
-メディアクエリ
-----------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
   footer {
     padding: 80px 80px 100px 50px;
@@ -427,12 +362,9 @@ footer p {
     left: 50px;
   }
   footer .footer-nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
+    justify-content: space-around;
     white-space: nowrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
   footer .footer-nav ul li {
     padding: 0;
@@ -446,28 +378,25 @@ footer p {
   }
 }
 
-/*=============================================
-ヘッダー
-=============================================*/
 .l-header {
-  background-image: url(../images/bg_header_pink_sp.jpg);
   width: 100vw;
-  background-size: cover;
-  background-position: 0 45%;
   height: 930px;
   text-align: center;
-  color: white;
   padding: 90px 100px;
+  background-image: url(../images/bg_header_pink_sp.jpg);
+  background-size: cover;
+  background-position: 0 45%;
+  color: white;
 }
 
 @media screen and (min-width: 768px) {
   .l-header {
+    padding-top: 200px;
     background-image: none;
     background-image: url(../images/bg_header.jpg);
+    margin-bottom: -120px;
     background-position: 50% 25%;
     background-size: cover;
-    padding-top: 200px;
-    margin-bottom: -120px;
   }
 }
 
@@ -481,9 +410,8 @@ footer p {
   font-weight: normal;
 }
 
-/*
-固定バー
--------------------------------------------------------------------------*/
+/*固定バー
+---------------------------------------------------*/
 .c-fixbar {
   position: relative;
   text-align: center;
@@ -491,16 +419,12 @@ footer p {
 
 .c-fixbar .c-fixbar-img {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(255, 255, 255, 0.9);
+  justify-content: center;
   position: fixed;
   bottom: 0;
   left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: 20;
 }
 
@@ -519,10 +443,10 @@ footer p {
 }
 
 .c-fixbar > p {
+  width: 100%;
   position: absolute;
   top: -60px;
   color: white;
-  width: 100%;
   font-size: 13px;
 }
 
@@ -533,60 +457,47 @@ footer p {
   }
 }
 
-/*
-フェードインアニメーション
-----------------------------------------------------------------------------*/
+/*フェードインアニメーション
+---------------------------------------------------*/
 @media screen and (min-width: 485px) {
   .l-header > img {
     opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    -webkit-transition: all 3s;
+    transform: translateY(20px);
     transition: all 3s;
   }
   .l-header > img.done {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   .l-header > h1 {
     opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    -webkit-transition: all 3s;
+    transform: translateY(20px);
     transition: all 3s;
   }
   .l-header > h1.done {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   .c-fixbar > p {
     opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    -webkit-transition: all 3s;
+    transform: translateY(20px);
     transition: all 3s;
   }
   .c-fixbar > p.done {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
 @media screen and (min-width: 768px) {
   .c-fixbar-img > a > img {
     opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    -webkit-transition: all 3s;
+    transform: translateY(20px);
     transition: all 3s;
   }
   .c-fixbar-img > a > img.done {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
@@ -596,39 +507,36 @@ Object
 /*
 project
 ---------------------------------------------------------------------------*/
-/*=======================================================
-ブーケ案内
-=======================================================*/
 .p-bouquet {
-  background-color: #f5f5f5;
-  padding: 80px 0;
-  color: rgba(63, 67, 74, 0.9);
   width: 100vw;
-  line-height: 1.65rem;
-  font-weight: 700;
+  padding: 80px 0;
   text-align: center;
+  background-color: #f5f5f5;
+  line-height: 1.65rem;
+  color: rgba(63, 67, 74, 0.9);
+  font-weight: 700;
 }
 
 .p-bouquet .c-orange-balloon {
-  background-color: #ee7543;
+  width: 130px;
   display: inline-block;
   position: relative;
-  width: 130px;
   padding: 10px 5px;
   border-radius: 10px;
-  color: white;
   font-size: 13px;
   font-weight: normal;
+  background-color: #ee7543;
+  color: white;
 }
 
 .p-bouquet .c-orange-balloon::after {
   content: '';
+  width: 0;
+  height: 0;
   display: inline-block;
   position: absolute;
   top: 100%;
   left: 50%;
-  width: 0;
-  height: 0;
   border-top: 8px solid #ee7543;
   border-right: 5px solid transparent;
   border-bottom: 5px solid transparent;
@@ -636,9 +544,9 @@ project
 }
 
 .p-bouquet h3 {
+  margin-bottom: 10px;
   font-weight: normal;
   font-size: 20px;
-  margin-bottom: 10px;
   line-height: 2rem;
 }
 
@@ -650,14 +558,14 @@ project
 }
 
 .p-bouquet p:nth-of-type(2) {
-  font-size: 15px;
   padding-top: 20px;
+  font-size: 15px;
 }
 
 .p-bouquet p:nth-of-type(3) {
+  padding-bottom: 40px;
   font-size: 20px;
   font-weight: bold;
-  padding-bottom: 40px;
 }
 
 .p-bouquet p:nth-of-type(3) span {
@@ -665,20 +573,15 @@ project
 }
 
 .p-bouquet p:nth-of-type(n+4) {
+  line-height: 1.2rem;
   font-size: 13px;
   font-weight: normal;
-  line-height: 1.2rem;
 }
 
-/*
-メディアクエリ
----------------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
   .bou-cal-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     height: 580px;
+    display: flex;
   }
   .bou-cal-wrap .p-bouquet {
     width: 50%;
@@ -688,28 +591,23 @@ project
   }
 }
 
-/*
-.purple .blue .yellow
------------------------------------------------------------------------*/
 .p-concept-wrap {
   width: 100vw;
 }
 
 @media screen and (min-width: 768px) {
   .p-concept-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     height: 100%;
+    display: flex;
   }
 }
 
 .p-concept-wrap .p-concept {
   width: 100vw;
   height: 60vh;
+  padding: 55px 45px;
   background-size: cover;
   background-position: 0 95%;
-  padding: 55px 45px;
   color: white;
 }
 
@@ -752,47 +650,31 @@ project
   background-image: url(../images/bg_service03.jpg);
 }
 
-/*===============================================
-サービス
-=================================================*/
 .p-servise {
-  color: rgba(63, 67, 74, 0.9);
   padding: 120px 20px;
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
+  color: rgba(63, 67, 74, 0.9);
 }
 
 .p-servise h2 {
-  font-weight: normal;
   line-height: 2rem;
   letter-spacing: 1px;
+  font-weight: normal;
 }
 
 .p-servise .servise-icon-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 485px) {
   .p-servise .servise-icon-wrap {
     display: block;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -815,8 +697,6 @@ project
   font-size: 15px;
 }
 
-/*メディアクエリ
-------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
   .p-servise {
     width: 100vw;
@@ -824,12 +704,9 @@ project
   .p-servise .servise-icon-wrap {
     width: 85%;
     display: block;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
+    justify-content: space-around;
     margin: 0 auto;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
 }
 
