@@ -1,0 +1,79 @@
+.l-card__delivery {
+	width: 100vw;
+	padding: 12vw 8vw;
+	text-align: center;
+	background-color: #ead5dc;
+	color: rgba(63,67,74,0.9);
+
+	@include mq(md) {
+		// height: 700px;
+		padding: 8vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	@include mq(lg) {
+		max-height: 750px;
+	}
+
+	.delivery-wrap__left {
+		@media screen and (max-width:767px) {
+			margin-bottom: 1.75em;
+		}
+		@include mq(md) {
+			width: 50%;
+		}
+		>h3 {
+			font-size: 21px;
+			font-weight: normal;
+			padding-bottom: 2em;
+			@include mq(md) {
+				display: none; //左サイドの「どんなお花が～」を非表示
+			}
+		}
+
+		img {
+			width: 75%;
+			@include mq(md) {
+				width: 100%;
+				max-width: 660px;
+			}
+		}
+	}
+
+	.delivery-wrap__right {
+		@include mq(md) {
+			width: 50%;
+			// margin-right: 40px;
+		}
+		// @include mq(lg) {
+			// width: 500px;
+			// margin-right: 80px;
+		// }
+		// @include mq(xl) {
+		// 	margin-right: 100px;
+		// }
+
+		h2 {
+			display: none;
+			@include mq(md) {
+				display: block;
+				padding-bottom: 1.75em;
+				font-weight: normal;
+			}
+		}
+
+		h3 {
+			padding: 15px;
+			font-weight: 400;
+			font-size: 21px;
+		}
+
+		p {
+			padding: 10px 10px;
+			text-align: left;
+			font-size: 15px;
+			letter-spacing: 2px;
+		}
+	}
+}

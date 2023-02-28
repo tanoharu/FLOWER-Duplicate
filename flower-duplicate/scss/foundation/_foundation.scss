@@ -1,0 +1,20 @@
+/*共通
+---------------------------------------------------*/
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+/*mediaquery
+---------------------------------------------------*/
+$breakpoints: (
+	'sm': 'screen and (min-width: 485px)',
+	'md': 'screen and (min-width: 768px)',
+	'lg': 'screen and (min-width: 823px)',
+	'xl': 'screen and (min-width: 1440px)',
+) !default;
+
+@mixin mq($breakpoint: sm) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}

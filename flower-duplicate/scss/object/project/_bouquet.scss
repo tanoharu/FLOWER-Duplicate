@@ -1,0 +1,80 @@
+.p-bouquet {
+	width: 100vw;
+	padding: 12vw 8vw;
+	text-align: center;
+	background-color: #f5f5f5;
+	line-height: 1.65rem;
+	color: rgba(63,67,74,0.9);
+	font-weight: 700;
+	
+	.c-orange-balloon {
+		width: 130px;
+		display: inline-block;
+		position: relative;
+		padding: 10px 5px;
+		border-radius: 10px;
+		font-size: 13px;
+		font-weight: normal;
+		background-color: #ee7543;
+		color: white;
+	}
+
+	.c-orange-balloon::after {
+		content: '';
+		width: 0;  //横幅なくす
+		height: 0;  //縦幅なくす
+		display: inline-block;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		border-top: 8px solid #ee7543;
+		border-right: 5px solid transparent;  //top以外は透明
+		border-bottom: 5px solid transparent;  //top以外は透明
+		border-left: 5px solid transparent;  //top以外は透明
+	}
+	
+	h3 {
+		margin-bottom: 10px;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 2rem;
+	}
+
+	img {
+		width: 90%;
+		max-width: 200px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	p:nth-of-type(2) { //「お花とグリーン～～」
+		padding-top: 20px;
+		font-size: 15px;
+	}
+	p:nth-of-type(3){ //「800円」
+		padding-bottom: 40px;
+		font-size: 20px;
+		font-weight: bold;
+		span {
+			font-size: 15px;
+		}
+	}
+	p:nth-of-type(n+4){ //「*送料～、*価格は～」
+		line-height: 1.2rem;
+		font-size: 13px;
+		font-weight: normal;
+	}
+}
+
+@include mq(md) {
+	.bou-cal-wrap {
+		height: 100%;
+		display: flex;
+
+		.p-bouquet {
+			width: 50%;
+			height: 100%;
+			padding: 5vw;
+		}
+	}
+}
