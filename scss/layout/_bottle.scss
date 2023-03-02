@@ -3,10 +3,11 @@
 	background-color: #E7E3DF;
 	color: rgba(63,67,74,0.9);
 	text-align: center;
+	padding: 12vw 8vw;
 
 	.bottle-container {
 		.bottle-intro {
-			width: 400px;
+			width: 90%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -20,7 +21,8 @@
 		}
 
 		.balloon-white {
-			width: 130px;
+			width: 100%;
+			max-width: 130px;
 			display: block;
 			padding: 5px;
 			margin: auto;
@@ -30,11 +32,13 @@
 		}
 
 		>img {
-			width: 380px;
+			max-width: 380px;
+			width: 100%;
+			margin: auto;
 		}
 		
 		:nth-child(4) { //「お花を飾るのに欠かせない～～」
-			padding: 20px 30px;
+			padding: 30px 0;
 			text-align: left;
 			font-size: 15px;
 			letter-spacing: 2px;
@@ -43,22 +47,28 @@
 
 	> :nth-child(4) { //「アプリ内でご購入～～」
 		position: relative;
-		left: -63px;
+		// left: -63px;
 		padding: 15px 10px;
 		font-size: 13px;
 	}
 
 	.p-bottle-wrap {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		text-align: center;
+		width: 90%;
+		max-width: 660px;
+		margin: auto;
 
 		.bottle-item {
 			position: relative;
 			img {
-				width: 100px;
+				width: 94%;
 				display: block;
-				margin: 7px;
+				margin-right: 3%;
+				&:nth-child(3) {
+					margin-right: 0;
+				}
 			}
 		>p {
 			display: inline-block;
@@ -73,7 +83,9 @@
 		display: flex;
 		justify-content: center;
 		position: relative;
-		left: -23px;
+		width: 90%;
+		margin: auto;
+		// left: -23px;
 		>p {
 			padding: 5px;
 			border: 2px solid rgb(63,67,74);
@@ -94,17 +106,25 @@
 }
 }
 
+ @media screen and (max-width: 767px) {
+		.flower-img {
+		display: none;
+	}
+}
+
 @include mq(md) {
 	.l-card__bottle {
 		display: flex;
 		justify-content: center;
-		padding-left: 5%;
+		// padding-left: 5%;
+		padding: 5vw 8vw;
 
 		.bottle-container {
-			width: 400px;
-			margin: 100px 0 100px auto;
+			width: 50%;
+			margin: auto;
 
 			.bottle-intro {
+				width: 90%;
 				>h3 {
 					font-size: 26px;
 				}
@@ -112,38 +132,40 @@
 					display: none;
 				}
 				:nth-child(4) {
-					margin-top: 90px;
+					margin: 1.75em auto;
 					padding: 0;
 					padding-bottom: 15px;
 				}
 			}
 			
 			.p-bottle-wrap {
+				width: 90%;
+				max-width: inherit;
 				z-index: 10;
-				.bottle-item {
-					img {
-						margin-right: 25px;
-						margin-left: 25px;
-					}
-				}
 			}
 			.bottle-text {
-				left: -60px; //左端揃え
+				width: 90%;
+				margin: auto;
+				justify-content: flex-start;
 			}
 			>:nth-child(4) {
-				left: -105px; //左端揃え
+				text-align: left;
+				width: 90%;
+				margin: auto;
+				padding: 15px 10px 15px 0;
 			}
 		}
 
 		.flower-img {
-			width: 55%;
+			width: 50%;
 			margin-right: 0;
 			margin-left: auto;
-			background-image: url(../../images/bg_vase.jpg);
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: top 70% right 40%;
-		}	
+			>img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 	}
 }
 

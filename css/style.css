@@ -5,7 +5,7 @@ foundation
 /*共通
 ---------------------------------------------------*/
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 /*mediaquery
@@ -16,7 +16,7 @@ layout
 .l-card__bindlogo {
   width: 100vw;
   height: 500px;
-  padding: 80px 100px;
+  padding: 80px 8vw 8vw;
   text-align: center;
   background-image: url(../images/bg_download2.jpg);
   background-size: 400px;
@@ -24,15 +24,14 @@ layout
   background-color: #efdfc5;
   color: rgba(63, 67, 74, 0.9);
 }
-
 .l-card__bindlogo h2 {
   padding-top: 10px;
   font-size: 16px;
   font-weight: normal;
 }
-
 .l-card__bindlogo img {
-  width: 110px;
+  width: 100%;
+  max-width: 110px;
 }
 
 @media screen and (min-width: 823px) {
@@ -45,31 +44,29 @@ layout
     margin-left: 300px;
   }
 }
-
 .l-card__bottle {
   width: 100vw;
   background-color: #E7E3DF;
   color: rgba(63, 67, 74, 0.9);
   text-align: center;
+  padding: 12vw 8vw;
 }
-
 .l-card__bottle .bottle-container .bottle-intro {
-  width: 400px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
 }
-
 .l-card__bottle .bottle-container .bottle-intro h3 {
   padding-bottom: 20px;
   line-height: 2.3rem;
   font-size: 22px;
   font-weight: normal;
 }
-
 .l-card__bottle .bottle-container .bottle-intro .balloon-white {
-  width: 130px;
+  width: 100%;
+  max-width: 130px;
   display: block;
   padding: 5px;
   margin: auto;
@@ -77,81 +74,86 @@ layout
   font-size: 14px;
   background-color: white;
 }
-
 .l-card__bottle .bottle-container .bottle-intro > img {
-  width: 380px;
+  max-width: 380px;
+  width: 100%;
+  margin: auto;
 }
-
 .l-card__bottle .bottle-container .bottle-intro :nth-child(4) {
-  padding: 20px 30px;
+  padding: 30px 0;
   text-align: left;
   font-size: 15px;
   letter-spacing: 2px;
 }
-
 .l-card__bottle .bottle-container > :nth-child(4) {
   position: relative;
-  left: -63px;
   padding: 15px 10px;
   font-size: 13px;
 }
-
 .l-card__bottle .bottle-container .p-bottle-wrap {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
+  width: 90%;
+  max-width: 660px;
+  margin: auto;
 }
-
 .l-card__bottle .bottle-container .p-bottle-wrap .bottle-item {
   position: relative;
 }
-
 .l-card__bottle .bottle-container .p-bottle-wrap .bottle-item img {
-  width: 100px;
+  width: 94%;
   display: block;
-  margin: 7px;
+  margin-right: 3%;
 }
-
+.l-card__bottle .bottle-container .p-bottle-wrap .bottle-item img:nth-child(3) {
+  margin-right: 0;
+}
 .l-card__bottle .bottle-container .p-bottle-wrap .bottle-item > p {
   display: inline-block;
   position: relative;
   top: -35px;
   font-size: 14px;
 }
-
 .l-card__bottle .bottle-container .bottle-text {
   display: flex;
   justify-content: center;
   position: relative;
-  left: -23px;
+  width: 90%;
+  margin: auto;
 }
-
 .l-card__bottle .bottle-container .bottle-text > p {
   padding: 5px;
-  border: 2px solid #3f434a;
+  border: 2px solid rgb(63, 67, 74);
   font-weight: 700;
   font-size: 14px;
 }
-
 .l-card__bottle .bottle-container .bottle-text .bottle-text__value {
   padding-left: 20px;
   text-align: left;
   font-size: 18px;
 }
-
 .l-card__bottle .bottle-container .bottle-text .bottle-text__value p:nth-of-type(2) {
   font-size: 13px;
 }
 
+@media screen and (max-width: 767px) {
+  .flower-img {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .l-card__bottle {
     display: flex;
     justify-content: center;
-    padding-left: 5%;
+    padding: 5vw 8vw;
   }
   .l-card__bottle .bottle-container {
-    width: 400px;
-    margin: 100px 0 100px auto;
+    width: 50%;
+    margin: auto;
+  }
+  .l-card__bottle .bottle-container .bottle-intro {
+    width: 90%;
   }
   .l-card__bottle .bottle-container .bottle-intro > h3 {
     font-size: 26px;
@@ -160,155 +162,141 @@ layout
     display: none;
   }
   .l-card__bottle .bottle-container .bottle-intro :nth-child(4) {
-    margin-top: 90px;
+    margin: 1.75em auto;
     padding: 0;
     padding-bottom: 15px;
   }
   .l-card__bottle .bottle-container .p-bottle-wrap {
+    width: 90%;
+    max-width: inherit;
     z-index: 10;
   }
-  .l-card__bottle .bottle-container .p-bottle-wrap .bottle-item img {
-    margin-right: 25px;
-    margin-left: 25px;
-  }
   .l-card__bottle .bottle-container .bottle-text {
-    left: -60px;
+    width: 90%;
+    margin: auto;
+    justify-content: flex-start;
   }
   .l-card__bottle .bottle-container > :nth-child(4) {
-    left: -105px;
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    padding: 15px 10px 15px 0;
   }
   .l-card__bottle .flower-img {
-    width: 55%;
+    width: 50%;
     margin-right: 0;
     margin-left: auto;
-    background-image: url(../../images/bg_vase.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top 70% right 40%;
+  }
+  .l-card__bottle .flower-img > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .flower-img {
     margin-right: 0;
     margin-left: auto;
   }
 }
-
 .l-calender {
-  height: 450px;
   text-align: center;
+  padding: 12vw 8vw;
 }
-
 .l-calender p {
-  padding: 100px 0 20px 0;
-  line-height: 2.0rem;
+  line-height: 2rem;
+  padding-bottom: 2em;
   font-size: 20px;
   font-weight: 500;
   color: rgba(63, 67, 74, 0.9);
 }
-
 .l-calender img {
-  width: 170px;
+  width: 100%;
+  max-width: 170px;
 }
 
 @media screen and (min-width: 768px) {
   .l-calender {
     width: 50%;
-    height: 100%;
-    padding: 60px 0;
+    display: flex;
+    padding: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
   }
 }
 
 .l-card__delivery {
   width: 100vw;
-  padding: 80px;
+  padding: 12vw 8vw;
   text-align: center;
   background-color: #ead5dc;
   color: rgba(63, 67, 74, 0.9);
 }
-
 @media screen and (min-width: 768px) {
   .l-card__delivery {
-    height: 700px;
+    padding: 8vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
   }
 }
-
 @media screen and (min-width: 823px) {
   .l-card__delivery {
-    height: 750px;
+    max-height: 750px;
   }
 }
-
+@media screen and (max-width: 767px) {
+  .l-card__delivery .delivery-wrap__left {
+    margin-bottom: 1.75em;
+  }
+}
 @media screen and (min-width: 768px) {
   .l-card__delivery .delivery-wrap__left {
     width: 50%;
   }
 }
-
 .l-card__delivery .delivery-wrap__left > h3 {
   font-size: 21px;
   font-weight: normal;
+  padding-bottom: 2em;
 }
-
 @media screen and (min-width: 768px) {
   .l-card__delivery .delivery-wrap__left > h3 {
     display: none;
   }
 }
-
 .l-card__delivery .delivery-wrap__left img {
   width: 75%;
 }
-
 @media screen and (min-width: 768px) {
   .l-card__delivery .delivery-wrap__left img {
-    width: 90%;
+    width: 100%;
+    max-width: 660px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .l-card__delivery .delivery-wrap__right {
-    width: 400px;
-    margin-right: 40px;
+    width: 50%;
   }
 }
-
-@media screen and (min-width: 823px) {
-  .l-card__delivery .delivery-wrap__right {
-    width: 500px;
-    margin-right: 80px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .l-card__delivery .delivery-wrap__right {
-    margin-right: 100px;
-  }
-}
-
 .l-card__delivery .delivery-wrap__right h2 {
   display: none;
 }
-
 @media screen and (min-width: 768px) {
   .l-card__delivery .delivery-wrap__right h2 {
     display: block;
-    padding-bottom: 50px;
+    padding-bottom: 1.75em;
     font-weight: normal;
   }
 }
-
 .l-card__delivery .delivery-wrap__right h3 {
   padding: 15px;
   font-weight: 400;
   font-size: 21px;
 }
-
 .l-card__delivery .delivery-wrap__right p {
   padding: 10px 10px;
   text-align: left;
@@ -318,33 +306,28 @@ layout
 
 footer {
   width: 100vw;
-  height: 530px;
+  height: 68vh;
   padding: 40px 40px 0px 40px;
   background-color: #3f434a;
   color: white;
 }
-
 footer img {
   width: 60px;
   float: right;
 }
-
 footer ul {
   list-style: none;
 }
-
 footer ul li {
   padding: 10px;
   font-size: 14px;
 }
-
 footer ul li > a {
   color: #fff;
   text-decoration: none;
 }
-
 footer p {
-  padding-top: 120px;
+  padding-top: 8vw;
   text-align: center;
   font-size: 13px;
   font-weight: 700;
@@ -353,7 +336,8 @@ footer p {
 
 @media screen and (min-width: 768px) {
   footer {
-    padding: 80px 80px 100px 50px;
+    height: auto;
+    padding: 80px 80px 32px;
   }
   footer img {
     display: block;
@@ -362,6 +346,8 @@ footer p {
     left: 50px;
   }
   footer .footer-nav ul {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-around;
     white-space: nowrap;
@@ -373,22 +359,17 @@ footer p {
     text-decoration: none;
     color: inherit;
   }
-  footer p {
-    padding-top: 300px;
-  }
 }
-
 .l-header {
   width: 100vw;
-  height: 930px;
+  height: 100vh;
   text-align: center;
-  padding: 90px 100px;
+  padding: 90px 12vw 12vw;
   background-image: url(../images/bg_header_pink_sp.jpg);
   background-size: cover;
   background-position: 0 45%;
   color: white;
 }
-
 @media screen and (min-width: 768px) {
   .l-header {
     padding-top: 200px;
@@ -399,12 +380,10 @@ footer p {
     background-size: cover;
   }
 }
-
 .l-header img {
   width: 130px;
   margin-bottom: 15px;
 }
-
 .l-header h1 {
   font-size: 18px;
   font-weight: normal;
@@ -416,7 +395,6 @@ footer p {
   position: relative;
   text-align: center;
 }
-
 .c-fixbar .c-fixbar-img {
   width: 100%;
   display: flex;
@@ -427,7 +405,6 @@ footer p {
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 20;
 }
-
 @media screen and (min-width: 768px) {
   .c-fixbar .c-fixbar-img {
     position: static;
@@ -436,12 +413,10 @@ footer p {
     background-color: transparent;
   }
 }
-
 .c-fixbar .c-fixbar-img img {
   width: 160px;
   margin: 20px 10px;
 }
-
 .c-fixbar > p {
   width: 100%;
   position: absolute;
@@ -449,7 +424,6 @@ footer p {
   color: white;
   font-size: 13px;
 }
-
 @media screen and (min-width: 768px) {
   .c-fixbar > p {
     position: static;
@@ -488,7 +462,6 @@ footer p {
     transform: translate(0, 0);
   }
 }
-
 @media screen and (min-width: 768px) {
   .c-fixbar-img > a > img {
     opacity: 0;
@@ -499,9 +472,7 @@ footer p {
     opacity: 1;
     transform: translate(0, 0);
   }
-}
-
-/*==================================================
+} /*==================================================
 Object
 ==================================================*/
 /*
@@ -509,14 +480,13 @@ project
 ---------------------------------------------------------------------------*/
 .p-bouquet {
   width: 100vw;
-  padding: 80px 0;
+  padding: 12vw 8vw;
   text-align: center;
   background-color: #f5f5f5;
   line-height: 1.65rem;
   color: rgba(63, 67, 74, 0.9);
   font-weight: 700;
 }
-
 .p-bouquet .c-orange-balloon {
   width: 130px;
   display: inline-block;
@@ -528,9 +498,8 @@ project
   background-color: #ee7543;
   color: white;
 }
-
 .p-bouquet .c-orange-balloon::after {
-  content: '';
+  content: "";
   width: 0;
   height: 0;
   display: inline-block;
@@ -542,36 +511,30 @@ project
   border-bottom: 5px solid transparent;
   border-left: 5px solid transparent;
 }
-
 .p-bouquet h3 {
   margin-bottom: 10px;
   font-weight: normal;
   font-size: 20px;
   line-height: 2rem;
 }
-
 .p-bouquet img {
-  width: 200px;
-  height: 200px;
+  width: 90%;
+  max-width: 200px;
   display: block;
   margin: 0 auto;
 }
-
 .p-bouquet p:nth-of-type(2) {
   padding-top: 20px;
   font-size: 15px;
 }
-
 .p-bouquet p:nth-of-type(3) {
   padding-bottom: 40px;
   font-size: 20px;
   font-weight: bold;
 }
-
 .p-bouquet p:nth-of-type(3) span {
   font-size: 15px;
 }
-
 .p-bouquet p:nth-of-type(n+4) {
   line-height: 1.2rem;
   font-size: 13px;
@@ -580,28 +543,24 @@ project
 
 @media screen and (min-width: 768px) {
   .bou-cal-wrap {
-    height: 580px;
+    height: 100%;
     display: flex;
   }
   .bou-cal-wrap .p-bouquet {
     width: 50%;
     height: 100%;
-    padding: 0;
-    padding: 50px;
+    padding: 5vw;
   }
 }
-
 .p-concept-wrap {
   width: 100vw;
 }
-
 @media screen and (min-width: 768px) {
   .p-concept-wrap {
     height: 100%;
     display: flex;
   }
 }
-
 .p-concept-wrap .p-concept {
   width: 100vw;
   height: 60vh;
@@ -610,7 +569,6 @@ project
   background-position: 0 95%;
   color: white;
 }
-
 @media screen and (min-width: 768px) {
   .p-concept-wrap .p-concept {
     height: 80vh;
@@ -618,19 +576,16 @@ project
     background-position: center;
   }
 }
-
 .p-concept-wrap .p-concept h2 {
   line-height: 2.3rem;
   font-weight: 500;
   font-size: 22px;
 }
-
 @media screen and (min-width: 768px) {
   .p-concept-wrap .p-concept h2 {
     font-size: 24px;
   }
 }
-
 .p-concept-wrap .p-concept p {
   padding-top: 10px;
   line-height: 1.6rem;
@@ -651,23 +606,20 @@ project
 }
 
 .p-servise {
-  padding: 120px 20px;
+  padding: 12vw 8vw;
   margin: 0 auto;
   text-align: center;
   color: rgba(63, 67, 74, 0.9);
 }
-
 .p-servise h2 {
   line-height: 2rem;
   letter-spacing: 1px;
   font-weight: normal;
 }
-
 .p-servise .servise-icon-wrap {
   display: flex;
   flex-direction: column;
 }
-
 @media screen and (min-width: 485px) {
   .p-servise .servise-icon-wrap {
     display: block;
@@ -677,21 +629,18 @@ project
     justify-content: center;
   }
 }
-
 .p-servise .servise-icon-wrap .servise-icon h3 {
   padding-bottom: 10px;
   font-size: 20px;
 }
-
 .p-servise .servise-icon-wrap .servise-icon h2, .p-servise .servise-icon-wrap .servise-icon h3 {
   font-weight: normal;
 }
-
 .p-servise .servise-icon-wrap .servise-icon img {
-  width: 80px;
+  width: 100%;
+  max-width: 80px;
   padding: 30px 0 0 0;
 }
-
 .p-servise .servise-icon-wrap .servise-icon p {
   padding: 0 20px;
   font-size: 15px;
@@ -700,6 +649,7 @@ project
 @media screen and (min-width: 768px) {
   .p-servise {
     width: 100vw;
+    padding: 5vw 8vw;
   }
   .p-servise .servise-icon-wrap {
     width: 85%;
@@ -709,11 +659,9 @@ project
     margin: 0 auto;
   }
 }
-
 /*
 component
 ---------------------------------------------------------------------------*/
 /*
 utility
----------------------------------------------------------------------------*/
-/*# sourceMappingURL=style.css.map */
+---------------------------------------------------------------------------*//*# sourceMappingURL=style.css.map */

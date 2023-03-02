@@ -1,8 +1,9 @@
 .l-header {
 	width: 100vw;
-	height: 930px; //「*北海道、沖縄、離島～～」の高さを一定にするため固定
+	height: 100vh;
 	text-align: center;
-	padding: 90px 100px;
+	// padding: 90px 100px;
+	padding: 90px 12vw 12vw;
 	background-image: url(../images/bg_header_pink_sp.jpg);
 	background-size: cover;
 	background-position: 0 45%; //横・縦
